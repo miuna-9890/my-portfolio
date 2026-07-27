@@ -3,7 +3,7 @@ import potrait from '../assets/potrait.png'
 
 export const Hero = () => {
     return (
-        <section className="min-h-screen bg-charcoal flex items-center px-8">
+        <section id="hero" className="min-h-screen bg-charcoal flex items-center px-8">
             <div className="max-w-6xl mx-auto w-full">
 
                 <div className="grid lg:grid-cols-2 gap-20 items-center">

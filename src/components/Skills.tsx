@@ -11,8 +11,8 @@ export const Skills = () => {
 
             <div className="max-w-6xl mx-auto">
 
-                <div className="mb-20">
-                    <h2 className="text-5xl font-bold mt-4 text-paper">
+                <div className="mb-10">
+                    <h2 className="text-5xl font-bold mt-2 text-paper">
                         Skills
                     </h2>
                     <p className="text-graphite-light leading-8 text-lg mt-2">Technologies I have worked with across projects and internships</p>

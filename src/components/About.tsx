@@ -6,7 +6,7 @@ export const About = () => {
 
             <div className="max-w-6xl mx-auto">
 
-                <h2 className="text-5xl font-bold mt-4 text-paper mb-20">
+                <h2 className="text-5xl font-bold mt-2 text-paper mb-10">
                     About Me
                 </h2>
 
