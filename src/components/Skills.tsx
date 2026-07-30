@@ -19,7 +19,7 @@ export const Skills = () => {
                 </div>
 
                         {/*Category tabs*/}
-                        <div className="flex gap-4 mb-12">
+                        <div className="flex flex-wrap gap-4 mb-12">
                             {categories.map((category) => (
                                 <button key={category} onClick={() => {setSelectedCategory(category);
                                 setSelectedSkill(skills[category][0])}} className={`border  text-graphite-light py-3 px-6 rounded shadow-lg transition duration-300 cursor-pointer
