@@ -10,7 +10,7 @@ export const Projects = () => {
         scrollRef.current.scrollBy({left: amount, behavior: "smooth"});
     }
     return (
-        <section id="projects" className="bg-charcoal px-8 py-32 border-t border-graphite-light">
+        <section id="projects" className="bg-charcoal px-4 sm:px-8 py-32 border-t border-graphite-light">
             <div className="max-w-6xl mx-auto">
                 <div className="mb-10">
                     <h2 className="text-5xl font-bold mt-2 text-paper">
@@ -22,12 +22,12 @@ export const Projects = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                    <button onClick={() => handleScroll("left")} className="text-paper hover:text-sanguine text-2xl">
+                    <button onClick={() => handleScroll("left")} className="hidden sm:block text-paper hover:text-sanguine text-2xl">
                         ←
                     </button>
                     <div ref={scrollRef} className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 pt-4">
                     {projects.map((project, index) => (
-                        <div key={project.title} className={`w-80 shrink-0 snap-start    relative bg-paper p-6 text-charcoal ${tilts[index % tilts.length]} hover:rotate-0 hover:scale-105 hover:shadow-2xl transition-all duration-300 shadow-lg`}>
+                        <div key={project.title} className={`w-[85vw] shrink-0 snap-start relative bg-paper p-6 text-charcoal ${tilts[index % tilts.length]} hover:rotate-0 hover:scale-105 hover:shadow-2xl transition-all duration-300 shadow-lg`}>
                             {/*tape */}
                             <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 bg-sanguine/70 rotate-3"></div>
 
@@ -59,7 +59,7 @@ export const Projects = () => {
                         </div>
                     ))}
                     </div>
-                    <button onClick={() => handleScroll("right")} className="text-paper hover:text-sanguine text-2xl">
+                    <button onClick={() => handleScroll("right")} className="hidden sm:block text-paper hover:text-sanguine text-2xl">
                         →
                     </button>
                 </div>
