@@ -3,6 +3,8 @@ import {About} from "./components/About.tsx";
 import {Skills} from "./components/Skills.tsx";
 import {Nav} from "./components/Nav.tsx";
 import {Projects} from "./components/Projects.tsx";
+import {Experience} from "./components/Experience.tsx";
+import {Contact} from "./components/Contact.tsx";
 function App() {
 
   return (
@@ -12,6 +14,8 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <Experience />
+      <Contact />
 
     </div>
   )
