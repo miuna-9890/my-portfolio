@@ -1,75 +1,91 @@
-# React + TypeScript + Vite
+# Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal portfolio website built with **React, TypeScript, and Vite**.
 
-Currently, two official plugins are available:
+The portfolio showcases my background as a Computer Science student, my software engineering experience, technical skills, projects, and my interest in both software development and art.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+* **About Me** – Introduction and background
+* **Skills** – Interactive display of my technical skills and technologies
+* **Projects** – Highlights of my software engineering projects and coursework
+* **Experience** – Internship and professional experience
+* **Art** – A selection of my graphite and charcoal artwork
+* **Responsive Design** – Designed to work across different screen sizes
+* **Interactive UI** – Subtle interactions and animations throughout the portfolio
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+* **React** – UI development
+* **TypeScript** – Type-safe development
+* **Vite** – Development server and build tooling
+* **Tailwind CSS** – Styling and responsive layouts
+* **React Hooks** – Component state and behaviour
+* **JavaScript / HTML / CSS** – Core web technologies
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📁 Project Structure
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+src/
+├── assets/          # Images and other static assets
+├── components/      # Reusable React components
+├── App.tsx          # Main application
+├── main.tsx         # Application entry point
+└── ...
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Make sure you have **Node.js** and **npm** installed.
 
+### Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+cd <project-folder>
 ```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The application will be available at the local URL shown in the terminal.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## 🎨 About the Design
+
+The portfolio combines my interest in **software engineering and traditional graphite art**. The visual design uses a clean, minimal style with artwork-inspired elements to make the portfolio feel more personal rather than like a standard developer template.
+
+## 📌 Future Improvements
+
+* Add more projects and internship experience
+* Improve animations and micro-interactions
+* Add more artwork and drawing progress
+* Continue refining the responsive experience
+
+## 📄 License
+
+This project is for personal portfolio use.
