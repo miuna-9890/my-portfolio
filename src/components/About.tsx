@@ -56,7 +56,7 @@ export const About = () => {
 
                             <ul className="space-y-2 text-graphite-light">
                                 <li>Software Engineering</li>
-                                <li>Full Stack Development</li>
+                                <li>Frontend-development</li>
                                 <li>UI/UX Design</li>
                             </ul>
                         </div>

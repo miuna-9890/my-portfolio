@@ -27,12 +27,25 @@ export const skills: Record<SkillCategory, Skill[]> = {
                 "Power Instruments Internship",
                 "Portfolio Website",
             ],
-            related: ["TypeScript", "Redux", "Tailwind CSS"],
+            related: ["JavaScript", "TypeScript", "Redux"],
+        },
+        {
+            name: "JavaScript",
+            icon: "🟨",
+            subtitle: "Programming Language",
+            description:
+                "Built interactive web applications and implemented frontend functionality using modern JavaScript.",
+            usedIn: [
+                "PeerPrep",
+                "Power Instruments Internship",
+                "Portfolio Website",
+            ],
+            related: ["React", "TypeScript", "Vite"],
         },
         {
             name: "TypeScript",
             icon: "📘",
-            subtitle: "Language",
+            subtitle: "Programming Language",
             description:
                 "Developed type-safe React applications with improved maintainability and developer experience.",
             usedIn: [
@@ -40,7 +53,7 @@ export const skills: Record<SkillCategory, Skill[]> = {
                 "Power Instruments Internship",
                 "Portfolio Website",
             ],
-            related: ["React", "Next.js"],
+            related: ["React", "JavaScript", "Redux"],
         },
         {
             name: "Tailwind CSS",
@@ -50,7 +63,6 @@ export const skills: Record<SkillCategory, Skill[]> = {
                 "Designed responsive interfaces using utility-first styling and reusable design patterns.",
             usedIn: [
                 "Portfolio Website",
-                "NextStep SuperApp",
                 "Power Instruments Internship",
             ],
             related: ["React", "Figma"],
@@ -60,7 +72,7 @@ export const skills: Record<SkillCategory, Skill[]> = {
             icon: "🗂️",
             subtitle: "State Management",
             description:
-                "Managed shared application state across complex frontend applications.",
+                "Managed shared application state across complex React applications.",
             usedIn: [
                 "Power Instruments Internship",
             ],
@@ -72,9 +84,9 @@ export const skills: Record<SkillCategory, Skill[]> = {
         {
             name: "Node.js",
             icon: "🟢",
-            subtitle: "Runtime",
+            subtitle: "Backend Runtime",
             description:
-                "Developed backend services and REST APIs using Express and Node.js.",
+                "Built backend services and APIs using Node.js for the PeerPrep application.",
             usedIn: ["PeerPrep"],
             related: ["Express.js", "Prisma"],
         },
@@ -83,29 +95,31 @@ export const skills: Record<SkillCategory, Skill[]> = {
             icon: "🚀",
             subtitle: "Backend Framework",
             description:
-                "Built RESTful APIs and handled routing for backend microservices.",
+                "Built REST APIs and handled backend routing and request processing using Express.js.",
             usedIn: ["PeerPrep"],
-            related: ["Node.js", "REST APIs"],
+            related: ["Node.js", "Prisma"],
         },
         {
             name: "Prisma",
             icon: "🔷",
             subtitle: "ORM",
             description:
-                "Managed database schemas and queries with a type-safe ORM.",
+                "Used Prisma as a type-safe ORM to interact with the database without writing raw SQL queries.",
             usedIn: ["PeerPrep"],
             related: ["PostgreSQL", "Node.js"],
         },
     ],
-
     Database: [
         {
             name: "PostgreSQL",
             icon: "🐘",
             subtitle: "Relational Database",
             description:
-                "Designed relational schemas and stored application data efficiently.",
-            usedIn: ["PeerPrep"],
+                "Worked with PostgreSQL to store and manage relational application data across professional and personal projects.",
+            usedIn: [
+                "PeerPrep",
+                "Integro Tech Internship",
+            ],
             related: ["Prisma", "Supabase"],
         },
         {
@@ -113,66 +127,60 @@ export const skills: Record<SkillCategory, Skill[]> = {
             icon: "🟢",
             subtitle: "Backend Platform",
             description:
-                "Used PostgreSQL through Supabase for authentication and database management.",
+                "Used Supabase with PostgreSQL to manage application data and support different services in PeerPrep.",
             usedIn: ["PeerPrep"],
-            related: ["PostgreSQL"],
+            related: ["PostgreSQL", "Prisma"],
         },
         {
             name: "MongoDB",
             icon: "🍃",
             subtitle: "NoSQL Database",
             description:
-                "Worked with document-based databases during coursework and testing.",
-            usedIn: ["E-commerce Project"],
-            related: ["Node.js"],
-        },
-        {
-            name: "Redis",
-            icon: "🔴",
-            subtitle: "Caching",
-            description:
-                "Used Redis for caching and improving application performance.",
-            usedIn: ["PeerPrep"],
-            related: ["RabbitMQ"],
+                "Worked with MongoDB while developing and testing software for a system built on a document-based database.",
+            usedIn: ["Software Testing Project"],
+            related: ["Jest", "Node.js"],
         },
     ],
 
     Testing: [
         {
-            name: "Jest",
-            icon: "🃏",
+            name: "Vitest",
+            icon: "🧪",
             subtitle: "Unit Testing",
             description:
-                "Wrote unit tests for backend controllers and frontend components.",
-            usedIn: ["E-commerce Project"],
-            related: ["React Testing Library"],
-        },
-        {
-            name: "React Testing Library",
-            icon: "🧪",
-            subtitle: "Frontend Testing",
-            description:
-                "Created integration tests to verify user interactions and UI behaviour.",
-            usedIn: ["E-commerce Project"],
-            related: ["Jest"],
+                "Wrote unit tests for frontend functionality and components during my Power Instruments internship.",
+            usedIn: ["Power Instruments Internship"],
+            related: ["React Testing Library", "Playwright"],
         },
         {
             name: "Playwright",
             icon: "🎭",
             subtitle: "End-to-End Testing",
             description:
-                "Automated user flows including authentication and checkout processes.",
-            usedIn: ["E-commerce Project"],
-            related: ["Jest"],
+                "Created end-to-end tests to verify complete user workflows and application behaviour.",
+            usedIn: [
+                "Power Instruments Internship",
+                "Software Testing Project",
+            ],
+            related: ["Vitest", "Jest"],
+        },
+        {
+            name: "Jest",
+            icon: "🃏",
+            subtitle: "Testing Framework",
+            description:
+                "Wrote automated tests for an e-commerce platform as part of a software testing project.",
+            usedIn: ["Software Testing Project"],
+            related: ["Playwright"],
         },
         {
             name: "JMeter",
             icon: "📈",
-            subtitle: "Performance Testing",
+            subtitle: "Non-Functional Testing",
             description:
-                "Performed stress testing and analysed system performance under heavy loads.",
-            usedIn: ["E-commerce Project"],
-            related: [],
+                "Performed non-functional and performance testing to evaluate system behaviour under different loads.",
+            usedIn: ["Software Testing Project"],
+            related: ["Jest", "Playwright"],
         },
     ],
 
@@ -182,41 +190,47 @@ export const skills: Record<SkillCategory, Skill[]> = {
             icon: "🌿",
             subtitle: "Version Control",
             description:
-                "Collaborated on team projects using Git branching and pull request workflows.",
-            usedIn: [
-                "All Projects",
-            ],
+                "Used Git for version control, branching, and collaboration across individual and team projects.",
+            usedIn: ["All Projects"],
             related: ["GitHub"],
         },
         {
-            name: "Docker",
-            icon: "🐳",
-            subtitle: "Containerization",
+            name: "GitHub",
+            icon: "🐙",
+            subtitle: "Code Collaboration",
             description:
-                "Containerized applications and managed multi-service environments with Docker Compose.",
-            usedIn: ["PeerPrep"],
-            related: ["RabbitMQ"],
+                "Used GitHub to host repositories, collaborate with teammates, and manage development workflows.",
+            usedIn: ["Most Projects"],
+            related: ["Git"],
         },
         {
-            name: "RabbitMQ",
-            icon: "📨",
-            subtitle: "Message Queue",
+            name: "Jira",
+            icon: "🔵",
+            subtitle: "Project Management",
             description:
-                "Implemented asynchronous communication between microservices.",
-            usedIn: ["PeerPrep"],
-            related: ["Docker"],
+                "Used Jira to track tasks, manage development work, and collaborate within an agile team.",
+            usedIn: ["Integro Tech Internship"],
+            related: ["Git", "GitHub"],
         },
         {
             name: "Figma",
             icon: "🎨",
             subtitle: "UI Design",
             description:
-                "Designed wireframes, prototypes, and user interfaces before development.",
+                "Created wireframes and interface designs to plan and communicate user experiences before development.",
             usedIn: [
                 "NextStep SuperApp",
-                "Portfolio Website",
             ],
-            related: ["Tailwind CSS"],
+            related: ["React", "Tailwind CSS"],
+        },
+        {
+            name: "Claude",
+            icon: "🤖",
+            subtitle: "AI-Assisted Development",
+            description:
+                "Used AI-assisted development to support coding, debugging, test writing, and software development workflows.",
+            usedIn: ["Power Instruments Internship", "Personal Projects"],
+            related: ["TypeScript", "React", "Vitest", "Playwright"],
         },
     ],
 };
