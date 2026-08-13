@@ -7,21 +7,25 @@ export interface ExperienceEntry {
 
 export const experience: ExperienceEntry[] = [
     {
-        title: "Software Engineering Intern",
-        company: "Your Current Company",
-        period: "2026 — Present",
+        title: "Frontend Engineering Intern",
+        company: "Power Instruments Pte Ltd",
+        period: "Jul. 2026 — Present",
         points: [
-            "Built a reusable admin tools feature with dialogs and validation",
-            "Added unit test coverage for validation and submission logic",
+            "Developed and enhanced frontend features for the EgenKit vessel fuel monitoring platform using React, TypeScript, Redux, and Tailwind CSS.",
+            "Built notification management features from UI to API integration, creating reusable components.",
+            "Developed unit and end-to-end tests using Vitest, React Testing Library, and Playwright alongside feature development to ensure reliability and prevent regressions.",
+            "Enhanced the report settings feature by integrating backend APIs with the frontend, modifying existing components and building new UI components, while adding tests throughout development.",
+            "Collaborated with engineers in an Agile environment using Git-based workflows, participating in code reviews and incorporating pull request feedback.",
         ],
     },
     {
         title: "Software Engineering Intern",
-        company: "Previous Company",
-        period: "2025",
+        company: "Integro Technologies Pte Ltd",
+        period: "May 2025 — Aug. 2025",
         points: [
-            "First bullet point about what you did",
-            "Second bullet point",
+            "Developed SQL scripts to combine data from multiple database tables and extract data into importable scripts for internal applications.",
+            "Created stored procedures in Oracle and PostgreSQL to support data import and processing workflows.",
+            "Tested and debugged SQL scripts and stored procedures to ensure correct data extraction and processing.",
         ],
     },
 ];

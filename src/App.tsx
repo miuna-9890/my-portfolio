@@ -17,7 +17,7 @@ function App() {
       <Projects />
       <Experience />
       <Contact />
-        <Chatbot />
+      <Chatbot />
 
     </div>
   )

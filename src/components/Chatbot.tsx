@@ -79,17 +79,19 @@ export default function Chatbot() {
             {/* Chat button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed bottom-6 right-6 z-50 rounded-full bg-black px-5 py-3 text-white shadow-lg"
+                className="fixed bottom-6 right-6 z-50 rounded-full bg-sanguine px-5 py-3 text-paper shadow-lg hover:bg-sanguine-dim hover:cursor-pointer"
             >
                 ✦ Ask me
             </button>
 
             {/* Chat window */}
             {isOpen && (
-                <div className="fixed bottom-20 right-6 z-50 flex h-[500px] w-[350px] flex-col rounded-2xl border bg-white shadow-2xl">
-                    <div className="border-b p-4">
-                        <h2 className="font-semibold">AI Portfolio Assistant</h2>
-                        <p className="text-sm text-gray-500">
+                <div className="fixed bottom-20 right-6 z-50 flex h-[500px] w-[350px] flex-col rounded-2xl border bg-paper shadow-2xl">
+                    <div className="border-b border-graphite p-4">
+                        <h2 className="font-semibold text-charcoal">
+                            ✏️ AI Portfolio Assistant
+                        </h2>
+                        <p className="text-sm text-graphite-light">
                             Ask me about Mithuna
                         </p>
                     </div>
@@ -100,7 +102,7 @@ export default function Chatbot() {
                                 key={index}
                                 className={`rounded-xl p-3 text-sm ${
                                     message.role === "user"
-                                        ? "ml-auto bg-black text-white"
+                                        ? "ml-auto bg-charcoal text-white"
                                         : "mr-auto bg-gray-100 text-gray-900"
                                 } max-w-[85%]`}
                             >
@@ -176,7 +178,7 @@ export default function Chatbot() {
                             <button
                                 onClick={sendMessage}
                                 disabled={loading}
-                                className="rounded-lg bg-black px-4 text-white disabled:opacity-50"
+                                className="rounded-lg bg-charcoal px-4 text-white disabled:opacity-50"
                             >
                                 ↑
                             </button>

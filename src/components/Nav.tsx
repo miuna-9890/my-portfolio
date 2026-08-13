@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useEffect, useState} from "react";
 
 const links = [
     { href: "#hero", label: "Home" },
@@ -13,10 +13,38 @@ export const Nav = () => {
     const [selected, setSelected] = useState<string>("Home");
     const [menuOpen, setMenuOpen] = useState(false);
 
+    useEffect(() => {
+        const sections = document.querySelectorAll("section[id]");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const link = links.find(
+                            (link) => link.href === `#${entry.target.id}`
+                        );
+
+                        if (link) {
+                            setSelected(link.label);
+                        }
+                    }
+                });
+            },
+            {
+                threshold: 0.3,
+            }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        return () => observer.disconnect();
+    }, []);
+
     const handleClick = (label: string) => {
         setSelected(label);
         setMenuOpen(false);
     };
+
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-charcoal/90 backdrop-blur border-b border-graphite/40">
