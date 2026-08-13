@@ -1,8 +1,8 @@
 import { GoogleGenAI } from "@google/genai";
-import { profile } from "../src/data/profile";
-import { experience } from "../src/data/experience";
-import { projects } from "../src/data/projects";
-import { skills } from "../src/data/skills";
+import { profile } from "../src/data/profile.js";
+import { experience } from "../src/data/experience.js";
+import { projects } from "../src/data/projects.js";
+import { skills } from "../src/data/skills.js";
 
 const ai = new GoogleGenAI({
     apiKey: process.env.GEMINI_API_KEY,
