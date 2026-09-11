@@ -70,12 +70,12 @@ export const ProjectModal = ({project, onClose}: ProjectModalProps) => {
                             </div>
                             {project.link && (
                                 <a
-                                    href={project.link}
+                                    href={project.link.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="mt-5 group inline-flex items-center gap-2 self-start text-sanguine px-2.5 py-1 text-sm transition hover:text-charcoal"
                                 >
-                                    View Project
+                                    {project.link.label}
                                     <span className="transition-transform group-hover:translate-x-1">
                                     →
                                 </span>
@@ -190,6 +190,7 @@ export const ProjectModal = ({project, onClose}: ProjectModalProps) => {
                                                 <p className="mt-1 text-sm leading-6 text-graphite">
                                                     {decision.description}
                                                 </p>
+
                                             </div>
                                         ))}
                                     </div>
@@ -268,19 +269,16 @@ export const ProjectShowcase = ({ project }: ProjectShowcaseProps) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const images = project.images;
-
     if (!images || images.length === 0) {
         return (
             <div className="flex min-h-[420px] items-center justify-center border border-dashed border-graphite-light/50 bg-charcoal p-8 text-center text-paper">
                 <div className="max-w-sm">
-                    <span className="font-mono text-xs uppercase tracking-widest text-sanguine">
-                        Production Work
-                    </span>
+                <span className="font-mono text-xs uppercase tracking-widest text-sanguine">
+                    {project.visualFallback?.label}
+                </span>
 
                     <p className="mt-4 text-sm leading-6 text-paper/70">
-                        Visual details from this project aren't publicly
-                        available. The case study focuses on the engineering
-                        work, architecture, and implementation decisions.
+                        {project.visualFallback?.description}
                     </p>
                 </div>
             </div>

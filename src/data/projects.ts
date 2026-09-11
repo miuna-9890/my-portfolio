@@ -8,7 +8,10 @@ export interface Project {
     role: string;
 
     stack: string[];
-    link?: string;
+    link?: {
+        label: string;
+        href: string;
+    };
     contributions: string[];
     decisions: {
         title: string;
@@ -20,14 +23,21 @@ export interface Project {
         src: string;
         caption: string;
     }[];
+    visualFallback?: {
+        label: string;
+        description: string;
+    };
 }
 
 export const projects: Project[] = [
     {
-        title: "Power Instruments Dashboard",
+        title: "Power Instruments Internship",
         category: "Frontend Engineering",
         description:
-            "Contributed production frontend features to the EgenKit vessel fuel monitoring platform. Developed notification management features from UI to API integration, including reusable components and comprehensive unit and end-to-end tests. Integrated backend APIs into Report Settings and built reusable UI components. Migrated an existing feature to the new platform architecture by redesigning the UI, replacing Redux with Zustand, and introducing Zod schema validation.",
+            "Contributed production frontend features to the EgenKit vessel fuel monitoring platform. " +
+            "Developed notification management features from UI to API integration, including reusable components and comprehensive unit and end-to-end tests. " +
+            "Integrated backend APIs into Report Creation feature and built reusable UI components. " +
+            "Migrated an existing feature to the new platform architecture by redesigning the UI, replacing Redux with Zustand, and introducing Zod schema validation.",
         overview:
             "A production vessel fuel-monitoring platform where I worked on frontend features, API integration, testing, and migration to a newer application architecture.",
         context: "Frontend Engineering Internship",
@@ -90,8 +100,11 @@ export const projects: Project[] = [
             "The importance of reusable components when building production interfaces.",
             "How automated testing provides confidence when modifying existing functionality.",
         ],
-
-        // No images for now — production screenshots may not be suitable for public use.
+        visualFallback: {
+            label: "Production Work",
+            description:
+                "Visual details from this project aren't publicly available. The case study focuses on the engineering work, architecture, and implementation decisions.",
+        },
     },
 
     {
@@ -163,7 +176,10 @@ export const projects: Project[] = [
             },
         ],
 
-        link: "https://github.com/CS3219-AY2526Sem1/cs3219-ay2526s1-project-g10",
+        link: {
+            label: "Github",
+            href: "https://github.com/CS3219-AY2526Sem1/cs3219-ay2526s1-project-g10"
+        },
     },
 
     {
@@ -239,7 +255,6 @@ export const projects: Project[] = [
             },
         ],
 
-        link: "https://my-portfolio-seven-omega-wujhu5thvk.vercel.app/",
     },
 
     {
@@ -250,7 +265,7 @@ export const projects: Project[] = [
         overview:
             "An academic planning experience designed to help university students organise their modules and navigate their academic journey through a user-centred design process.",
         context: "NUS UI/UX Project",
-        role: "UI/UX Designer",
+        role: "UI/UX Figma Designer",
         stack: [
             "Figma",
             "UX Research",
@@ -284,6 +299,7 @@ export const projects: Project[] = [
                 title: "Iterative Prototyping",
                 description:
                     "Used progressively higher-fidelity prototypes to test ideas early before committing to the final visual design.",
+
             },
         ],
 
@@ -304,19 +320,22 @@ export const projects: Project[] = [
         images: [
             {
                 src: "/projects/nextstep/home.png",
-                caption: "NextStep dashboard",
+                caption: "NextStep module planning",
             },
             {
                 src: "/projects/nextstep/planner.png",
                 caption: "Academic planning interface",
             },
             {
-                src: "/projects/nextstep/prototype.png",
+                src: "/projects/nextstep/graduation.png",
                 caption: "Interactive Figma prototype",
             },
         ],
 
-        link: "https://10mithuna.wixsite.com/nextstep",
+        link: {
+            label: "View Figma Prototype",
+            href: "https://www.figma.com/design/sJzqTLwafJhnXnoSAna6ZM/CS3240?node-id=26-7&p=f",
+        },
     },
 
     {
@@ -377,18 +396,16 @@ export const projects: Project[] = [
             "How good test coverage can make refactoring safer.",
         ],
 
-        images: [
-            {
-                src: "/projects/ecommerce/unit-tests.png",
-                caption: "Backend unit tests",
-            },
-            {
-                src: "/projects/ecommerce/e2e-tests.png",
-                caption: "End-to-end test workflow",
-            },
-        ],
+        link: {
+            label: "Github",
+            href: "https://github.com/cs4218/cs4218-2520-ecom-project-cs4218-2520-team19"
+        },
 
-        link: "https://github.com/cs4218/cs4218-2520-ecom-project-cs4218-2520-team19",
+        visualFallback: {
+            label: "Testing Project",
+            description:
+                "This project focused on automated testing across backend, frontend, database, and end-to-end workflows.",
+        },
     },
 
     {
@@ -446,18 +463,16 @@ export const projects: Project[] = [
             "How to design features around user workflows rather than isolated functionality.",
         ],
 
-        images: [
-            {
-                src: "/projects/cher/address-book.png",
-                caption: "Cher address book interface",
-            },
-            {
-                src: "/projects/cher/filtering.png",
-                caption: "Advanced contact filtering",
-            },
-        ],
+        link: {
+            label: "Github",
+            href: "https://github.com/AY2425S1-CS2103T-W13-1/tp"
+        },
 
-        link: "https://github.com/AY2425S1-CS2103T-W13-1/tp",
+        visualFallback: {
+            label: "Cli Desktop Application",
+            description:
+                "Visual details from this project aren't available now. Will be added soon",
+        },
     },
 
     {
@@ -520,7 +535,10 @@ export const projects: Project[] = [
             },
         ],
 
-        link: "https://github.com/miuna9890/ip",
+        link: {
+            label: "Github",
+            href: "https://github.com/miuna9890/ip",
+        }
     },
 
     {
@@ -587,15 +605,18 @@ export const projects: Project[] = [
                 caption: "LingoCard home screen",
             },
             {
-                src: "/projects/lingocard/flashcards.png",
-                caption: "Vocabulary flashcards",
+                src: "/projects/lingocard/reminder.png",
+                caption: "Reminders",
             },
             {
-                src: "/projects/lingocard/quiz.png",
-                caption: "Language quiz",
+                src: "/projects/lingocard/edit.png",
+                caption: "Edit reminders",
             },
         ],
 
-        link: "https://github.com/miuna9890/Lingo-Main",
+        link: {
+            label: "Github",
+            href: "https://github.com/miuna9890/Lingo-Main"
+        },
     },
 ];

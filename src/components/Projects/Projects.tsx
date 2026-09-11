@@ -52,9 +52,9 @@ export const Projects = () => {
                             ))}
                             </div>
                             {project.link && (
-                                <a href={project.link} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}
+                                <a href={project.link.href} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}
                                    className="group mt-4 inline-flex items-center gap-1 text-sm text-sanguine hover:text-charcoal">
-                                    View Project
+                                    {project.link.label}
                                     <span className="transition-transform group-hover:translate-x-1">
                                         →
                                     </span>
