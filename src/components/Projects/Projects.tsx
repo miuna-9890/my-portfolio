@@ -1,8 +1,10 @@
-import {projects} from "../data/projects.ts";
-import {useRef} from "react";
+import {type Project, projects} from "../../data/projects.ts";
+import {useRef, useState} from "react";
+import {ProjectModal} from "./ProjectModal.tsx";
 
 export const Projects = () => {
     const tilts = ["-rotate-2", "rotate-1", "-rotate-1", "rotate-2"];
+    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
     const scrollRef = useRef<HTMLDivElement>(null);
     const handleScroll = (direction: "left" | "right") => {
         if (!scrollRef.current) return;
@@ -27,7 +29,9 @@ export const Projects = () => {
                     </button>
                     <div ref={scrollRef} className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 pt-4">
                     {projects.map((project, index) => (
-                        <div key={project.title} className={`w-[85vw] sm:w-80 shrink-0 snap-start relative bg-paper p-6 text-charcoal ${tilts[index % tilts.length]} hover:rotate-0 hover:scale-105 hover:shadow-2xl transition-all duration-300 shadow-lg`}>
+                        <div key={project.title} className={`w-[85vw] sm:w-80 shrink-0 snap-start cursor-pointer relative bg-paper p-6 text-charcoal ${tilts[index % tilts.length]} hover:rotate-0 hover:scale-105 hover:shadow-2xl transition-all duration-300 shadow-lg`}
+                             onClick={() => setSelectedProject(project)}
+                        >
                             {/*tape */}
                             <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 bg-sanguine/70 rotate-3"></div>
 
@@ -38,7 +42,7 @@ export const Projects = () => {
                                 {project.title}
                             </h3>
                             <p className="text-sm text-graphite mt-2">
-                                {project.description}
+                                {project.overview}
                             </p>
                             <div className="flex flex-wrap gap-2 mt-4">
                             {project.stack.map((tech) => (
@@ -48,7 +52,8 @@ export const Projects = () => {
                             ))}
                             </div>
                             {project.link && (
-                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="group mt-4 inline-flex items-center gap-1 text-sm text-sanguine hover:text-charcoal">
+                                <a href={project.link} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}
+                                   className="group mt-4 inline-flex items-center gap-1 text-sm text-sanguine hover:text-charcoal">
                                     View Project
                                     <span className="transition-transform group-hover:translate-x-1">
                                         →
@@ -63,6 +68,13 @@ export const Projects = () => {
                         →
                     </button>
                 </div>
+
+                {selectedProject && (
+                    <ProjectModal
+                        project={selectedProject}
+                        onClose={() => setSelectedProject(null)}
+                    />
+                )}
 
             </div>
 

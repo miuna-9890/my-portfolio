@@ -2,6 +2,7 @@ export interface ExperienceEntry {
     title: string;
     company: string;
     period: string;
+    technologies: string[];
     points: string[];
 }
 
@@ -10,6 +11,15 @@ export const experience: ExperienceEntry[] = [
         title: "Frontend Engineering Intern",
         company: "Power Instruments Pte Ltd",
         period: "Jul. 2026 — Present",
+        technologies: [
+            "React",
+            "TypeScript",
+            "Redux",
+            "Tailwind CSS",
+            "Vitest",
+            "React Testing Library",
+            "Playwright",
+        ],
         points: [
             "Developed and enhanced frontend features for the EgenKit vessel fuel monitoring platform using React, TypeScript, Redux, and Tailwind CSS.",
             "Built notification management features from UI to API integration, creating reusable components.",
@@ -22,6 +32,11 @@ export const experience: ExperienceEntry[] = [
         title: "Software Engineering Intern",
         company: "Integro Technologies Pte Ltd",
         period: "May 2025 — Aug. 2025",
+        technologies: [
+            "SQL",
+            "Oracle",
+            "PostgreSQL",
+        ],
         points: [
             "Developed SQL scripts to combine data from multiple database tables and extract data into importable scripts for internal applications.",
             "Created stored procedures in Oracle and PostgreSQL to support data import and processing workflows.",

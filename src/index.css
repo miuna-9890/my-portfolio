@@ -9,3 +9,11 @@
     --color-sanguine: #a6453f;
     --color-sanguine-dim: #7a3230;
 }
+
+body:has(dialog[open]) {
+    overflow: hidden;
+}
+
+dialog::backdrop {
+    background: rgb(0 0 0 / 0.65);
+}
