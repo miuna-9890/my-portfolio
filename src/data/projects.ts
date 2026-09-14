@@ -333,8 +333,8 @@ export const projects: Project[] = [
         ],
 
         link: {
-            label: "View Figma Prototype",
-            href: "https://www.figma.com/design/sJzqTLwafJhnXnoSAna6ZM/CS3240?node-id=26-7&p=f",
+            label: "View Portfolio",
+            href: "https://10mithuna.wixsite.com/nextstep",
         },
     },
 
