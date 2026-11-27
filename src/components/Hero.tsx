@@ -35,7 +35,7 @@ export const Hero = () => {
                                 View Projects
                             </a>
                             <a
-                                href="/resume/Mithuna_Varatharaju_Resume.pdf"
+                                href="/resume/Resume.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="border border-graphite-light, hover:border-paper hover:text-paper text-graphite-light py-3 px-6 rounded shadow-lg transition duration-300"                            >
