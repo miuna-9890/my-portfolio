@@ -33,8 +33,8 @@ export const Skills = () => {
                                 {/*left side of the skills section*/}
 
                         {/*Skill cards*/}
-                        <div className="flex flex-col gap-4">
-                            {skills[selectedCategory].map((skill) => (
+                         <div className="flex flex-col gap-4 max-h-125 overflow-y-auto pr-3 skills-scroll">
+                                {skills[selectedCategory].map((skill) => (
                                 <div key={skill.name}  onClick={() => setSelectedSkill(skill)} className={`border rounded-xl p-5 cursor-pointer transition-all duration-300
                                 ${selectedSkill.name === skill.name
                                         ? "border-sanguine bg-sanguine/5"
