@@ -30,16 +30,14 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+
     {
         title: "Power Instruments Internship",
         category: "Frontend Engineering",
         description:
-            "Contributed production frontend features to the EgenKit vessel fuel monitoring platform. " +
-            "Developed notification management features from UI to API integration, including reusable components and comprehensive unit and end-to-end tests. " +
-            "Integrated backend APIs into Report Creation feature and built reusable UI components. " +
-            "Migrated an existing feature to the new platform architecture by redesigning the UI, replacing Redux with Zustand, and introducing Zod schema validation.",
+            "Worked on production frontend features across vessel monitoring and administrative platforms. Developed notification management features, integrated backend APIs, wrote automated tests, and migrated existing features to a newer platform architecture. Also enhanced a dashboard with customisable widget layouts, allowing users to arrange and resize dashboard components.",
         overview:
-            "A production vessel fuel-monitoring platform where I worked on frontend features, API integration, testing, and migration to a newer application architecture.",
+            "A frontend engineering internship where I contributed to production web applications, working on feature development, API integration, dashboard customisation, automated testing and platform migration.",
         context: "Frontend Engineering Internship",
         role: "Frontend Engineering Intern",
         stack: [
@@ -50,25 +48,33 @@ export const projects: Project[] = [
             "Zustand",
             "Zod",
             "TanStack Table",
+            "React Grid Layout",
             "Vitest",
             "React Testing Library",
             "Playwright",
         ],
 
         contributions: [
-            "Developed notification management features from UI implementation through API integration.",
+            "Developed notification management features from UI implementation through backend API integration.",
             "Built reusable components for notification and report settings workflows.",
             "Integrated backend APIs for report settings and daily report generation.",
-            "Migrated an existing feature to the new platform architecture with a redesigned UI.",
-            "Replaced Redux state management with Zustand and introduced Zod schema validation.",
-            "Implemented unit and end-to-end tests using Vitest, React Testing Library, and Playwright.",
+            "Migrated existing features to the newer RMS Admin platform, including User Management, Roles & Permissions and Report Management.",
+            "Developed report management interfaces, including report listings, workflow stages and theme customisation.",
+            "Enhanced the dashboard using React Grid Layout, allowing users to customise widget arrangements and resize dashboard components.",
+            "Migrated feature-level state management from Redux to Zustand and introduced Zod schema validation.",
+            "Implemented unit and end-to-end tests using Vitest, React Testing Library and Playwright.",
         ],
 
         decisions: [
             {
                 title: "Redux → Zustand",
                 description:
-                    "Migrated feature-level state management from Redux to Zustand to align with the architecture of the newer platform and simplify state management.",
+                    "Migrated feature-level state management from Redux to Zustand to align with the newer platform architecture and simplify state management.",
+            },
+            {
+                title: "Customisable Dashboard",
+                description:
+                    "Integrated React Grid Layout to support draggable and resizable dashboard widgets, giving users more flexibility in arranging their dashboard.",
             },
             {
                 title: "Reusable Components",
@@ -78,34 +84,38 @@ export const projects: Project[] = [
             {
                 title: "Zod Validation",
                 description:
-                    "Introduced Zod schemas to validate data and provide a clearer, safer contract when working with API responses.",
+                    "Introduced Zod schemas to validate data and provide a clearer contract when working with application data and API responses.",
             },
             {
                 title: "Automated Testing",
                 description:
-                    "Added unit and end-to-end tests to verify component behaviour and critical user workflows before changes were merged.",
+                    "Added unit and end-to-end tests to verify component behaviour and critical user workflows.",
             },
         ],
 
         challenges: [
             "Understanding an unfamiliar production codebase and following its existing architectural patterns.",
             "Migrating existing functionality while preserving its original behaviour.",
-            "Coordinating frontend state, API requests, and UI states across multiple components.",
-            "Ensuring redesigned components remained consistent with the new platform design system.",
+            "Coordinating frontend state, API requests and UI states across multiple components.",
+            "Working with dashboard layouts while accounting for different widget sizes and screen dimensions.",
+            "Ensuring redesigned components remained consistent with the newer platform's design system.",
         ],
 
         learned: [
             "How to work effectively within a large existing codebase.",
             "How architectural decisions affect maintainability and future development.",
-            "The importance of reusable components when building production interfaces.",
+            "How to build reusable components for production interfaces.",
+            "How dashboard layout libraries can support more flexible user experiences.",
             "How automated testing provides confidence when modifying existing functionality.",
         ],
+
         visualFallback: {
             label: "Production Work",
             description:
-                "Visual details from this project aren't publicly available. The case study focuses on the engineering work, architecture, and implementation decisions.",
+                "Visual details from this project aren't publicly available. This case study focuses on the engineering work, implementation decisions and features developed during my internship.",
         },
     },
+
 
     {
         title: "PeerPrep",

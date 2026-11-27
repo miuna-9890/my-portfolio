@@ -78,6 +78,42 @@ export const skills: Record<SkillCategory, Skill[]> = {
             ],
             related: ["React", "TypeScript"],
         },
+        {
+            name: "Zustand",
+            icon: "🗃️",
+            subtitle: "State Management",
+            description:
+                "Used Zustand to manage application state when migrating features to a newer React application architecture.",
+            usedIn: ["Power Instruments Internship"],
+            related: ["React", "TypeScript", "Redux"],
+        },
+        {
+            name: "Zod",
+            icon: "🛡️",
+            subtitle: "Schema Validation",
+            description:
+                "Used Zod schemas to validate data and improve type safety when working with application data and API responses.",
+            usedIn: ["Power Instruments Internship"],
+            related: ["TypeScript", "React"],
+        },
+        {
+            name: "TanStack Table",
+            icon: "📊",
+            subtitle: "Headless Table Library",
+            description:
+                "Used TanStack Table to build and manage data table interfaces in React applications.",
+            usedIn: ["Power Instruments Internship"],
+            related: ["React", "TypeScript"],
+        },
+        {
+            name: "React Grid Layout",
+            icon: "📐",
+            subtitle: "Dashboard Layout Library",
+            description:
+                "Used React Grid Layout to build customisable dashboards with draggable and resizable widgets, allowing users to arrange dashboard components according to their preferences.",
+            usedIn: ["Power Instruments Internship"],
+            related: ["React", "TypeScript", "Tailwind CSS"],
+        },
     ],
 
     Backend: [
