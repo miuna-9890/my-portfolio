@@ -36,7 +36,14 @@ ${projects
 ${project.title}
 Category: ${project.category}
 Description: ${project.description}
+Overview: ${project.overview}
 Technologies: ${project.stack.join(", ")}
+
+Contributions:
+${project.contributions.map((item) => `- ${item}`).join("\n")}
+
+AI Tools & Workflow:
+${project.aiUsage ?? "Not specified"}
 `
     )
     .join("\n")}
@@ -131,6 +138,8 @@ INSTRUCTIONS:
 - Answer questions about Mithuna in third person.
 - Refer to her as "Mithuna" when appropriate.
 - Do not claim to be Mithuna.
+- If asked about AI tools or AI-assisted development, explain how Mithuna used AI in her projects based on the provided information.
+- Distinguish between AI tools used during development and AI technologies integrated into the finished applications.
 
 USER QUESTION:
 ${message}

@@ -19,6 +19,7 @@ export interface Project {
     }[];
     challenges: string[];
     learned: string[];
+    aiUsage?: string;
     images?: {
         src: string;
         caption: string;
@@ -108,6 +109,13 @@ export const projects: Project[] = [
             "How dashboard layout libraries can support more flexible user experiences.",
             "How automated testing provides confidence when modifying existing functionality.",
         ],
+
+        aiUsage:
+            "Used Claude as a development assistant to understand unfamiliar parts of the existing codebase, " +
+            "explore implementation approaches and troubleshoot issues. I also used it to clarify unfamiliar " +
+            "libraries and understand existing code flows when working on feature migrations. " +
+            "I reviewed and adapted suggestions before applying them, and tested my implementations to ensure they " +
+            "met the project's requirements.",
 
         visualFallback: {
             label: "Production Work",
@@ -249,6 +257,11 @@ export const projects: Project[] = [
             "How to integrate an external AI API into a frontend application.",
             "How to design a user experience around both content and interaction.",
         ],
+
+        aiUsage:
+            "Used AI tools throughout the development process, from brainstorming design ideas and planning the portfolio structure to implementing individual components and refining the visual presentation. I used AI assistance to explore layout options, fine-tune spacing and alignment, position and size images, and develop interactive elements such as the hover effect that reveals artwork around my profile portrait. It also helped me organise project and skills data, explore implementation approaches and troubleshoot coding issues. I reviewed and customised the suggestions to match my intended design rather than relying on them as-is.\n" +
+            "\n" +
+            "Separately, I integrated the Gemini API to build an AI-powered chatbot that allows visitors to explore my projects, experience and skills.",
 
         images: [
             {

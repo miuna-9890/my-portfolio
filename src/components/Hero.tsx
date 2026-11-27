@@ -3,6 +3,9 @@ import portrait from '../assets/portrait.png'
 import artwork1 from '../assets/artwork1.png'
 import artwork2 from '../assets/artwork2.png'
 import artwork3 from '../assets/artwork3.png'
+import artwork4 from '../assets/artwork4.png'
+import artwork5 from '../assets/artwork5.png'
+import artwork6 from '../assets/artwork6.png'
 
 export const Hero = () => {
     return (
@@ -51,6 +54,7 @@ export const Hero = () => {
                                 alt="Graphite self portrait"
                                 className="relative z-10 max-h-[70vh] w-80 lg:w-96 max-w-md rounded-lg shadow-lg transition duration-500 group-hover:scale-[0.96]"
                             />
+
                             <p className="mt-4 text-center font-mono text-sm uppercase tracking-[0.2em] text-graphite-light">
                                 Hover to explore my artwork ↗
                             </p>
@@ -58,26 +62,49 @@ export const Hero = () => {
                             {/* Artwork previews */}
                             <div className="pointer-events-none absolute inset-0">
 
+                                {/* Top left */}
                                 <img
                                     src={artwork1}
                                     alt=""
                                     className="absolute -left-20 top-8 w-28 rounded-lg shadow-xl opacity-0 rotate-[-8deg] transition-all duration-500 group-hover:-left-32 group-hover:opacity-100"
                                 />
 
+                                {/* Top right */}
                                 <img
                                     src={artwork2}
                                     alt=""
-                                    className="absolute -right-16 top-20 w-28 rounded-lg shadow-xl opacity-0 rotate-[8deg] transition-all duration-500 group-hover:-right-28 group-hover:opacity-100"
+                                    className="absolute -right-16 top-12 w-28 rounded-lg shadow-xl opacity-0 rotate-[8deg] transition-all duration-500 group-hover:-right-28 group-hover:opacity-100"
                                 />
 
+                                {/* Middle left */}
+                                <img
+                                    src={artwork4}
+                                    alt=""
+                                    className="absolute -left-12 top-1/2 w-28 -translate-y-1/2 rounded-lg shadow-xl opacity-0 rotate-[6deg] transition-all duration-500 group-hover:-left-28 group-hover:opacity-100"
+                                />
+
+                                {/* Middle right */}
+                                <img
+                                    src={artwork5}
+                                    alt=""
+                                    className="absolute -right-12 top-1/2 w-28 -translate-y-1/2 rounded-lg shadow-xl opacity-0 rotate-[-7deg] transition-all duration-500 group-hover:-right-28 group-hover:opacity-100"
+                                />
+
+                                {/* Bottom left */}
                                 <img
                                     src={artwork3}
                                     alt=""
-                                    className="absolute bottom-4 left-1/2 w-28 -translate-x-1/2 translate-y-25 rounded-lg shadow-xl opacity-0 rotate-[-4deg] transition-all duration-500 group-hover:translate-y-45 group-hover:opacity-100"
+                                    className="absolute bottom-4 left-1/4 w-28 -translate-x-1/2 translate-y-6 rounded-lg shadow-xl opacity-0 rotate-[-5deg] transition-all duration-500 group-hover:translate-y-16 group-hover:opacity-100"
+                                />
+
+                                {/* Bottom right */}
+                                <img
+                                    src={artwork6}
+                                    alt=""
+                                    className="absolute bottom-4 left-3/4 w-28 -translate-x-1/2 translate-y-6 rounded-lg shadow-xl opacity-0 rotate-[7deg] transition-all duration-500 group-hover:translate-y-16 group-hover:opacity-100"
                                 />
 
                             </div>
-
                         </div>
                     </div>
 

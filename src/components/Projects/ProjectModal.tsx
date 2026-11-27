@@ -252,6 +252,27 @@ export const ProjectModal = ({project, onClose}: ProjectModalProps) => {
                                             </li>
                                         ))}
                                     </ul>
+                                    {project.aiUsage && (
+                                        <details className="group">
+                                            <summary className="flex cursor-pointer list-none items-center justify-between border-b border-graphite-light/30 py-4">
+                                                <div>
+                                                    <h3 className="mt-1 font-bold">
+                                                        AI Tools & Workflow
+                                                    </h3>
+                                                </div>
+
+                                                <span className="text-xl text-sanguine transition-transform group-open:rotate-45">
+                                                    +
+                                                </span>
+                                            </summary>
+
+                                            <div className="py-5">
+                                                <p className="text-sm leading-7 text-graphite">
+                                                    {project.aiUsage}
+                                                </p>
+                                            </div>
+                                        </details>
+                                    )}
                                 </details>
                             </div>
                         </div>
