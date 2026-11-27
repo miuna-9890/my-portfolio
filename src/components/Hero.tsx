@@ -45,66 +45,73 @@ export const Hero = () => {
                     </div>
 
                     {/* Right side of the hero section */}
-                    <div className="mt-16 flex justify-center lg:justify-end">
-                        <div className="group relative">
+                    <div className="mt-16 flex justify-center lg:justify-end pb-12">
+                        <div className="group relative flex flex-col items-center">
 
-                            {/* Main portrait */}
-                            <img
-                                src={portrait}
-                                alt="Graphite self portrait"
-                                className="relative z-10 max-h-[70vh] w-80 lg:w-96 max-w-md rounded-lg shadow-lg transition duration-500 group-hover:scale-[0.96]"
-                            />
+                            {/* Portrait and artwork container */}
+                            <div className="relative">
 
+                                {/* Main portrait */}
+                                <img
+                                    src={portrait}
+                                    alt="Graphite self portrait"
+                                    className="relative z-10 block max-h-[70vh] w-80 lg:w-96 max-w-md rounded-lg shadow-lg transition duration-500 group-hover:scale-[0.96]"
+                                />
+
+                                {/* Left artwork previews */}
+                                <div className="pointer-events-none absolute inset-0">
+
+                                    {/* Top left */}
+                                    <img
+                                        src={artwork1}
+                                        alt=""
+                                        className="absolute top-[15%] -left-20 lg:-left-32 w-24 lg:w-28 rounded-lg shadow-xl opacity-0 rotate-[-8deg] -translate-y-1/2 transition-all duration-500 group-hover:opacity-100"
+                                    />
+
+                                    {/* Middle left */}
+                                    <img
+                                        src={artwork3}
+                                        alt=""
+                                        className="absolute top-[50%] -left-20 lg:-left-32 w-24 lg:w-28 rounded-lg shadow-xl opacity-0 rotate-[5deg] -translate-y-1/2 transition-all duration-500 group-hover:opacity-100"
+                                    />
+
+                                    {/* Bottom left */}
+                                    <img
+                                        src={artwork4}
+                                        alt=""
+                                        className="absolute top-[85%] -left-20 lg:-left-32 w-24 lg:w-28 rounded-lg shadow-xl opacity-0 rotate-[-5deg] -translate-y-1/2 transition-all duration-500 group-hover:opacity-100"
+                                    />
+
+                                    {/* Right artwork previews */}
+                                    {/* Top right */}
+                                    <img
+                                        src={artwork2}
+                                        alt=""
+                                        className="absolute top-[15%] -right-20 lg:-right-32 w-24 lg:w-28 rounded-lg shadow-xl opacity-0 rotate-[8deg] -translate-y-1/2 transition-all duration-500 group-hover:opacity-100"
+                                    />
+
+                                    {/* Middle right */}
+                                    <img
+                                        src={artwork5}
+                                        alt=""
+                                        className="absolute top-[50%] -right-20 lg:-right-32 w-24 lg:w-28 rounded-lg shadow-xl opacity-0 rotate-[-5deg] -translate-y-1/2 transition-all duration-500 group-hover:opacity-100"
+                                    />
+
+                                    {/* Bottom right */}
+                                    <img
+                                        src={artwork6}
+                                        alt=""
+                                        className="absolute top-[85%] -right-20 lg:-right-32 w-24 lg:w-28 rounded-lg shadow-xl opacity-0 rotate-[6deg] -translate-y-1/2 transition-all duration-500 group-hover:opacity-100"
+                                    />
+
+                                </div>
+                            </div>
+
+                            {/* Caption */}
                             <p className="mt-4 text-center font-mono text-sm uppercase tracking-[0.2em] text-graphite-light">
                                 Hover to explore my artwork ↗
                             </p>
 
-                            {/* Artwork previews */}
-                            <div className="pointer-events-none absolute inset-0">
-
-                                {/* Top left */}
-                                <img
-                                    src={artwork1}
-                                    alt=""
-                                    className="absolute -left-20 top-8 w-28 rounded-lg shadow-xl opacity-0 rotate-[-8deg] transition-all duration-500 group-hover:-left-32 group-hover:opacity-100"
-                                />
-
-                                {/* Top right */}
-                                <img
-                                    src={artwork2}
-                                    alt=""
-                                    className="absolute -right-16 top-12 w-28 rounded-lg shadow-xl opacity-0 rotate-[8deg] transition-all duration-500 group-hover:-right-28 group-hover:opacity-100"
-                                />
-
-                                {/* Middle left */}
-                                <img
-                                    src={artwork4}
-                                    alt=""
-                                    className="absolute -left-12 top-1/2 w-28 -translate-y-1/2 rounded-lg shadow-xl opacity-0 rotate-[6deg] transition-all duration-500 group-hover:-left-28 group-hover:opacity-100"
-                                />
-
-                                {/* Middle right */}
-                                <img
-                                    src={artwork5}
-                                    alt=""
-                                    className="absolute -right-12 top-1/2 w-28 -translate-y-1/2 rounded-lg shadow-xl opacity-0 rotate-[-7deg] transition-all duration-500 group-hover:-right-28 group-hover:opacity-100"
-                                />
-
-                                {/* Bottom left */}
-                                <img
-                                    src={artwork3}
-                                    alt=""
-                                    className="absolute bottom-4 left-1/4 w-28 -translate-x-1/2 translate-y-6 rounded-lg shadow-xl opacity-0 rotate-[-5deg] transition-all duration-500 group-hover:translate-y-16 group-hover:opacity-100"
-                                />
-
-                                {/* Bottom right */}
-                                <img
-                                    src={artwork6}
-                                    alt=""
-                                    className="absolute bottom-4 left-3/4 w-28 -translate-x-1/2 translate-y-6 rounded-lg shadow-xl opacity-0 rotate-[7deg] transition-all duration-500 group-hover:translate-y-16 group-hover:opacity-100"
-                                />
-
-                            </div>
                         </div>
                     </div>
 
